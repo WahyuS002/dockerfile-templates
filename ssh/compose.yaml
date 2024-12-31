@@ -1,0 +1,16 @@
+services:
+  test-server-1:
+    build: .
+    container_name: test-server-1
+    hostname: test-server-1
+    ports:
+      - "2221:22"
+    restart: unless-stopped
+
+  test-server-2:
+    build: .
+    container_name: test-server-2
+    hostname: test-server-2
+    ports:
+      - "2222:22"
+    restart: unless-stopped
